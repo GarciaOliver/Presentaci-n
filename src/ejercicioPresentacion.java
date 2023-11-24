@@ -1,11 +1,11 @@
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author oli
@@ -59,11 +59,12 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(lblPalabra)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(158, 158, 158))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,9 +75,9 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPalabra)
                     .addComponent(txtPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnEnviar)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         pack();
@@ -84,8 +85,27 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
 
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
         String palabra = txtPalabra.getText();
-        char caracter = palabra.charAt(1);
-        JOptionPane.showMessageDialog(rootPane, "El segundo Caracter de su palabra es: " + caracter);
+        char caracter = palabra.charAt(0);
+        int contador = 0;
+        JOptionPane.showMessageDialog(rootPane, "El primer caracter de su palabra es: " + caracter);
+        for (char n : palabra.toCharArray()) {
+            if (n == palabra.charAt(0)) {
+                contador++;
+            }
+        }
+        JOptionPane.showMessageDialog(rootPane, "El primer caracter se repite " + "'" + contador + "' veces en su palabra");
+        
+        for (char n : palabra.toCharArray()) {
+            if (n == 'k' || n=='K') {
+                txtPalabra.setForeground(Color.red);
+            }else if(n=='T'|| n=='t'){
+                txtPalabra.setForeground(Color.BLUE);
+            }else if(n=='s'|| n=='S'){
+            txtPalabra.setForeground(Color.GREEN);
+            }else if(n=='m'|| n=='M'){
+            txtPalabra.setForeground(Color.YELLOW) ;
+            }
+        }
     }//GEN-LAST:event_btnEnviarActionPerformed
 
     /**
