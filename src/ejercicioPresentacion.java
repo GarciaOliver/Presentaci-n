@@ -77,7 +77,6 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String cadena=txtPalabra.getText();
         String acumulador="";
-        String inverso="";
         int letras=0;
         int espacios=0;
         for (char n : cadena.toCharArray()) {
@@ -88,14 +87,10 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
                 letras++;
             }
         }
-        for (int i = cadena.length(); i <=0; i--) {
-            inverso=cadena.charAt(i)+"";
-        }
         JOptionPane.showMessageDialog(rootPane, "La letra de la tercera posición es: "+cadena.charAt(2)+
                 "\n"+acumulador+
                 "\nLa palabra ingresada tiene "+letras+" letras."+
-                "\nLa palabra ingresada tiene "+espacios+" espacios."+
-                "\nInverso: "+inverso);
+                "\nLa palabra ingresada tiene "+espacios+" espacios.");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
