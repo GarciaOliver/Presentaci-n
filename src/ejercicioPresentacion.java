@@ -39,6 +39,12 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
 
         lblPalabra.setText("Ingrese una palabra: ");
 
+        txtPalabra.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPalabraKeyTyped(evt);
+            }
+        });
+
         btnEnviar.setText("Enviar");
         btnEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +93,8 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
         String palabra = txtPalabra.getText();
         char caracter = palabra.charAt(0);
         int contador = 0;
+        this.contarPalabras(palabra);
+        this.numeroVocales(palabra);
         JOptionPane.showMessageDialog(rootPane, "El primer caracter de su palabra es: " + caracter);
         for (char n : palabra.toCharArray()) {
             if (n == palabra.charAt(0)) {
@@ -94,19 +102,51 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
             }
         }
         JOptionPane.showMessageDialog(rootPane, "El primer caracter se repite " + "'" + contador + "' veces en su palabra");
-        
-        for (char n : palabra.toCharArray()) {
-            if (n == 'k' || n=='K') {
-                txtPalabra.setForeground(Color.red);
-            }else if(n=='T'|| n=='t'){
-                txtPalabra.setForeground(Color.BLUE);
-            }else if(n=='s'|| n=='S'){
-            txtPalabra.setForeground(Color.GREEN);
-            }else if(n=='m'|| n=='M'){
-            txtPalabra.setForeground(Color.YELLOW) ;
+    }//GEN-LAST:event_btnEnviarActionPerformed
+    public void numeroVocales(String palabra){
+    
+        int p = 0;
+
+        for (int i = 0; i < palabra.length(); i++) {
+            char c = palabra.charAt(i);
+            if (c == 'a' || c == 'A' || c=='e'|| c == 'E'|| c == 'i'|| c == 'I'|| c == 'o' || c == 'O'|| c == 'u'|| c == 'U') {
+                p++;
+            } 
+        }
+        JOptionPane.showMessageDialog(rootPane, "Lo que escribio tiene " + p + " vocales");
+    }
+    public void contarPalabras(String palabra) {
+        int p = 0;
+        for (int i = 0; i < palabra.length(); i++) {
+            char c = palabra.charAt(i);
+            if (c == ' ') {
+                p++;
             }
         }
-    }//GEN-LAST:event_btnEnviarActionPerformed
+        int palabras = p + 1;
+        JOptionPane.showMessageDialog(rootPane, "El número de espacios es: " + p);
+        JOptionPane.showMessageDialog(rootPane, "El numero de palabras es: " + palabras);
+    }
+
+    private void txtPalabraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPalabraKeyTyped
+        String palabra = txtPalabra.getText();
+
+        if (palabra.length() > 0) {
+            char primerCaracter = palabra.charAt(0);
+
+            if (primerCaracter == 'k' || primerCaracter == 'K') {
+                txtPalabra.setForeground(Color.RED);
+            } else if (primerCaracter == 'T' || primerCaracter == 't') {
+                txtPalabra.setForeground(Color.BLUE);
+            } else if (primerCaracter == 's' || primerCaracter == 'S') {
+                txtPalabra.setForeground(Color.GREEN);
+            } else if (primerCaracter == 'm' || primerCaracter == 'M') {
+                txtPalabra.setForeground(Color.ORANGE);
+            } else {
+                txtPalabra.setForeground(Color.BLACK);
+            }
+        }
+    }//GEN-LAST:event_txtPalabraKeyTyped
 
     /**
      * @param args the command line arguments
