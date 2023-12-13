@@ -143,21 +143,22 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
 
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
         String palabra = txtPalabra.getText();
-        char caracter = palabra.charAt(0);
-        int contador = 0;
-        this.contarPalabras(palabra);
         this.numeroVocales(palabra);
-        JOptionPane.showMessageDialog(rootPane, "El primer caracter de su palabra es: " + caracter);
-        for (char n : palabra.toCharArray()) {
-            if (n == palabra.charAt(0)) {
-                contador++;
-            }
-        }
-        JOptionPane.showMessageDialog(rootPane, "El primer caracter se repite " + "'" + contador + "' veces en su palabra");
+        //char caracter = palabra.charAt(0);
+        //int contador = 0;
+        //this.contarPalabras(palabra);
+        
+        //JOptionPane.showMessageDialog(rootPane, "El primer caracter de su palabra es: " + caracter);
+        //for (char n : palabra.toCharArray()) {
+            //if (n == palabra.charAt(0)) {
+          //      contador++;
+            //}
+        //}
+        //JOptionPane.showMessageDialog(rootPane, "El primer caracter se repite " + "'" + contador + "' veces en su palabra");
     }//GEN-LAST:event_btnEnviarActionPerformed
     public void numeroVocales(String palabra) {
 
-        int p = 0;
+        
         int c1 = 0;
         int c2 = 0;
         int c3 = 0;
@@ -166,9 +167,6 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
 
         for (int i = 0; i < palabra.length(); i++) {
             char c = palabra.charAt(i);
-            if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U') {
-                p++;
-            }
 
             if (c == 'a' || c == 'A') {
                 c1++;
@@ -182,6 +180,8 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
                 c5++;
             }
         }
+        
+        int p = c1+c2+c3+c4+c5;
 
         String a1 = String.valueOf(c1);
         String a2 = String.valueOf(c2);
@@ -199,18 +199,18 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
 
     }
 
-    public void contarPalabras(String palabra) {
-        int p = 0;
-        for (int i = 0; i < palabra.length(); i++) {
-            char c = palabra.charAt(i);
-            if (c == ' ') {
-                p++;
-            }
-        }
-        int palabras = p + 1;
-        JOptionPane.showMessageDialog(rootPane, "El número de espacios es: " + p);
-        JOptionPane.showMessageDialog(rootPane, "El numero de palabras es: " + palabras);
-    }
+    //public void contarPalabras(String palabra) {
+       // int p = 0;
+       // for (int i = 0; i < palabra.length(); i++) {
+       //     char c = palabra.charAt(i);
+       //     if (c == ' ') {
+       //         p++;
+       //     }
+       // }
+       // int palabras = p + 1;
+      //  JOptionPane.showMessageDialog(rootPane, "El número de espacios es: " + p);
+      //  JOptionPane.showMessageDialog(rootPane, "El numero de palabras es: " + palabras);
+    //}
 
     private void txtPalabraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPalabraKeyTyped
         String palabra = txtPalabra.getText();
@@ -230,6 +230,7 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
                 txtPalabra.setForeground(Color.BLACK);
             }
         }
+
     }//GEN-LAST:event_txtPalabraKeyTyped
 
     /**
