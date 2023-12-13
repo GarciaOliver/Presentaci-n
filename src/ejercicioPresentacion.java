@@ -32,6 +32,16 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
         lblPalabra = new javax.swing.JLabel();
         txtPalabra = new javax.swing.JTextField();
         btnEnviar = new javax.swing.JButton();
+        lblA = new javax.swing.JLabel();
+        txtA = new javax.swing.JTextField();
+        jblE = new javax.swing.JLabel();
+        txtE = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtI = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtO = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtU = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +62,16 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
             }
         });
 
+        lblA.setText("\"a-A\"");
+
+        jblE.setText("\"e-E\"");
+
+        jLabel2.setText("\"i-I\"");
+
+        jLabel3.setText("\"o_O\"");
+
+        jLabel4.setText("\"u-U\"");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -63,14 +83,26 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lblPalabra)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(158, 158, 158))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblPalabra)
+                            .addComponent(lblA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jblE, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtE, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtO, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtU, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtI, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(19, 19, 19)))))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,9 +113,29 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPalabra)
                     .addComponent(txtPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnEnviar)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblA)
+                    .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jblE)
+                    .addComponent(txtE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEnviar)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
@@ -103,18 +155,50 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
         }
         JOptionPane.showMessageDialog(rootPane, "El primer caracter se repite " + "'" + contador + "' veces en su palabra");
     }//GEN-LAST:event_btnEnviarActionPerformed
-    public void numeroVocales(String palabra){
-    
+    public void numeroVocales(String palabra) {
+
         int p = 0;
+        int c1 = 0;
+        int c2 = 0;
+        int c3 = 0;
+        int c4 = 0;
+        int c5 = 0;
 
         for (int i = 0; i < palabra.length(); i++) {
             char c = palabra.charAt(i);
-            if (c == 'a' || c == 'A' || c=='e'|| c == 'E'|| c == 'i'|| c == 'I'|| c == 'o' || c == 'O'|| c == 'u'|| c == 'U') {
+            if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U') {
                 p++;
-            } 
+            }
+
+            if (c == 'a' || c == 'A') {
+                c1++;
+            } else if (c == 'e' || c == 'E') {
+                c2++;
+            } else if (c == 'i' || c == 'I') {
+                c3++;
+            } else if (c == 'o' || c == 'O') {
+                c4++;
+            } else if (c == 'u' || c == 'U') {
+                c5++;
+            }
         }
-        JOptionPane.showMessageDialog(rootPane, "Lo que escribio tiene " + p + " vocales");
+
+        String a1 = String.valueOf(c1);
+        String a2 = String.valueOf(c2);
+        String a3 = String.valueOf(c3);
+        String a4 = String.valueOf(c4);
+        String a5 = String.valueOf(c5);
+
+        txtA.setText(a1);
+        txtE.setText(a2);
+        txtI.setText(a3);
+        txtO.setText(a4);
+        txtU.setText(a5);
+
+        JOptionPane.showMessageDialog(rootPane, "Lo que escribió tiene " + p + " vocales");
+
     }
+
     public void contarPalabras(String palabra) {
         int p = 0;
         for (int i = 0; i < palabra.length(); i++) {
@@ -186,7 +270,17 @@ public class ejercicioPresentacion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEnviar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jblE;
+    private javax.swing.JLabel lblA;
     private javax.swing.JLabel lblPalabra;
+    private javax.swing.JTextField txtA;
+    private javax.swing.JTextField txtE;
+    private javax.swing.JTextField txtI;
+    private javax.swing.JTextField txtO;
     private javax.swing.JTextField txtPalabra;
+    private javax.swing.JTextField txtU;
     // End of variables declaration//GEN-END:variables
 }
